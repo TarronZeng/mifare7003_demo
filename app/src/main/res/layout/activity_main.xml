@@ -1,0 +1,159 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".MainActivity" >
+
+	
+	<Button  
+		
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="20dip" 
+		android:textSize="30px"
+		android:id="@+id/open"   
+		android:text="open" 
+		android:onClick="open"           
+		/> 
+	
+	<Button  
+		
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="20dip" 
+		android:textSize="30px" 
+		android:layout_below="@id/open"	 
+		android:id="@+id/seek"    
+		android:text="seek Mifare"    
+		android:onClick="seek"                      
+		/> 
+	
+	  <TextView 
+	  	
+	  		android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" 
+	  	    android:layout_margin="20dip"
+	  	    android:id="@+id/tv_show"  
+	  	    android:layout_below="@id/seek"	
+	  	    android:text="please input block index:"   
+	  	    
+	  	
+	  	/>
+	  
+	 
+	  <EditText 
+	  	
+			android:layout_width="50dip" 
+		    android:layout_height="wrap_content"  	
+	  	    android:layout_margin="20dip"
+	  	    android:textSize="30px" 
+	  	    android:id="@+id/et_selblock"  
+	  	    android:layout_below="@id/seek"	
+	  	    android:layout_toRightOf="@id/tv_show"
+	  	    android:text="4"           
+	  	/>	  
+	
+	
+	 <Button    
+		 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="20dip" 
+		android:textSize="20px"
+		android:id="@+id/verifypassword"   
+		android:layout_below="@id/et_selblock"	 
+		android:text="Verify Password"  
+		android:onClick="verifypassword"           
+		 
+		/> 
+		
+	  <EditText 
+	  	
+			android:layout_width="500dip" 
+		    android:layout_height="wrap_content"  	
+	  	    android:layout_margin="20dip"
+	  	    android:textSize="30px"
+	  	    android:id="@+id/edit_passwd"  
+	  	    android:layout_below="@id/et_selblock"	
+	  	    android:layout_toRightOf="@id/verifypassword"
+	  	    android:text="FF,FF,FF,FF,FF,FF"       
+	  	/>
+	 
+	
+
+	<Button  
+		
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="20dip" 
+		android:textSize="20px"
+		android:id="@+id/writedata"   
+		android:layout_below="@id/edit_passwd"	 
+		android:text="Write Data" 
+		android:onClick="writedata"           
+		
+		/> 
+		
+	  <EditText 
+	  	
+			android:layout_width="500dip"
+		    android:layout_height="wrap_content"  	
+	  	    android:layout_margin="20dip"
+	  	    android:textSize="30px"
+	  	    android:id="@+id/edit_writedata"  
+	  	    android:layout_below="@id/edit_passwd"	
+	  	    android:layout_toRightOf="@id/writedata"
+	  	    android:text="A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,AA,AB,AC,AD,AE,AF"    
+	  	       
+	  	/>	
+	
+	 
+	
+			
+	
+	
+	<Button  
+		
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="20dip" 
+		android:textSize="20px"
+		android:id="@+id/readdata"   
+		android:layout_below="@id/writedata"	 
+		android:text="Read data" 
+		android:onClick="readdata"          
+		
+		/> 	
+	
+	
+	  <EditText 
+	  	
+			android:layout_width="500dip"
+		    android:layout_height="wrap_content"  	
+	  	    android:layout_margin="20dip"
+	  	    android:textSize="30px"
+	  	    android:id="@+id/edit_readdata"  
+	  	    android:layout_below="@id/writedata"	
+	  	    android:layout_toRightOf="@id/readdata"
+	  	       
+	  	/>		
+	
+	
+	
+	<Button  
+		
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="20dip"  
+		android:textSize="30px" 
+		android:id="@+id/sure"   
+		android:layout_below="@id/readdata"	 
+		android:text="close" 
+		android:onClick="close"           
+		
+		/>		
+	
+	
+	
+	
+</RelativeLayout>
